@@ -6,7 +6,7 @@ import java.io.*;
 public class FindLoops {
 
     static int N=10005;
-	static int[][] graph = new int[N][N];
+    static int[][] graph = new int[N][N];	
 
     /// A Hashmap Keep track of parent and child vertex in current iteration
     static HashMap<Integer, Integer> track = new HashMap<>();
