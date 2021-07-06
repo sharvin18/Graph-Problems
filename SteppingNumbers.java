@@ -57,6 +57,8 @@ public class SteppingNumbers {
     }
 
     static void stepNumbers(int n, int m){
+        // Send BFS calls from 0-9 digits as base case 
+        // which will help find the stepping numbers.
         for(int i=0; i<=9; i++)
             bfs(n,m,i);
 
