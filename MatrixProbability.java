@@ -7,6 +7,11 @@ import java.io.*;
 // Calculate the Probability that after N moves from a given position
 // (i, j) in the matrix, we will not cross boundaries of the matrix at any point.
 
+
+// Probability of one move can be calculated with the help of number of directions available
+// As we have 4 directions, each directions will contribute equally, hence
+// probability of one move will be 1/4 === 0.25
+
 public class MatrixProbability {
 
     // Direction array that defines the movement in up, down, left, right dir respectively
