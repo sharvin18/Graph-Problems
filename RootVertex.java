@@ -86,3 +86,18 @@ public class RootVertex {
     }
 }
 
+/*
+Enter number of nodes
+6
+Enter number of edges
+7
+0 1
+1 2
+2 3
+3 0
+4 3
+4 5
+5 0
+Root Vertex: 4
+*/
+
