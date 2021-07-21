@@ -1,10 +1,9 @@
-package com.learning.Graphs;
-
 import java.util.*;
 import java.io.*;
 
 // Find the root vertex of the given graph
 
+// Setting up the edges
 class Edge{
     int src,dest;
 
@@ -14,6 +13,7 @@ class Edge{
     }
 }
 
+// Class for initializing the graph
 class Graph{
 
     List<List<Integer>> list;
@@ -35,6 +35,7 @@ public class RootVertex {
 
     static ArrayList<Integer> visited;
 
+    // Dfs to all the nodes to check if all the nodes exists in the current path
     public static void dfs(Graph graph, int currNode){
 
         if(visited.contains(currNode)) return;
@@ -45,15 +46,19 @@ public class RootVertex {
             dfs(graph, child);
         }
 
+        
     }
 
+    // Helper function to initiate the dfs
     public static int findRoot(Graph graph, int nodes){
 
-        for(int i=0; i<nodes; i++){
+        for(int currRoot=0; currRoot<nodes; currRoot++){
             visited = new ArrayList<>();
-            dfs(graph, i);
+            dfs(graph, currRoot);
 
-            if(visited.size() == nodes) return i;
+            // check if all the nodes are visited in the current iteration
+            // if all are visited then current node is the root node
+            if(visited.size() == nodes) return currRoot;
         }
 
         return -1;
