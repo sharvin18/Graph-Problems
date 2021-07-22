@@ -3,6 +3,33 @@ import java.io.*;
 
 // Implement Topological Sorting
 
+// Setting up the edges
+class Edge{
+    int src,dest;
+
+    public Edge(int source, int dest){
+        this.src = source;
+        this.dest = dest;
+    }
+}
+
+// Class for initializing the graph
+class Graph{
+
+    List<List<Integer>> list;
+
+    public Graph(List<Edge> edges, int size){
+
+        list = new ArrayList<>();
+        for(int i=0;i<size; i++){
+            list.add(new ArrayList<>());
+        }
+
+        for(Edge e: edges){
+            list.get(e.src).add(e.dest);
+        }
+    }
+}
 
 public class TopologicalSort {
 
