@@ -6,6 +6,7 @@ Graph problems of all difficulty levels solved in Java.
 - [Number of Islands](NumberOfIslands.java)
 - [Find Root Vertext](RootVertex.java)
 - [Topological Sort](TopologicalSort.java)
+- [Path In Directed Graph](pathInDirectedGraph.java)
 
 ## Medium
 - [Stepping Numbers](SteppingNumbers.java)
