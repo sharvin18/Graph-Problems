@@ -1,9 +1,5 @@
-package com.learning.Graphs;
-
 import java.util.*;
 import java.io.*;
-
-import static sun.misc.Version.print;
 
 public class dfs {
 
@@ -35,18 +31,38 @@ public class dfs {
         }
     }
 
-    static void DFS(int v, boolean visited[], Graph graph){
-        // Mark the current node as visited and print it
-        visited[v] = true;
-        System.out.print(v + " ");
+    static void BFS(int s, Graph graph, int nodes){
+        
+        // Mark all the vertices as not visited(By default
+        // set as false)
+        boolean visited[] = new boolean[nodes];
+ 
+        // Create a queue for BFS
+        Queue<Integer> queue = new LinkedList<Integer>();
+ 
+        // Mark the current node as visited and enqueue it
+        visited[s-1]=true;
+        queue.add(s);
+ 
+        while (!queue.isEmpty()){
 
-        // Recurse for all the vertices adjacent to this vertex
-        Iterator<Integer> i = graph.list.get(v).listIterator();
-        while (i.hasNext())
-        {
-            int n = i.next();
-            if (!visited[n])
-                DFS(n, visited, graph);
+            // Dequeue a vertex from queue and print it
+            s = queue.poll();
+            System.out.print(s+" ");
+ 
+            // Get all adjacent vertices of the dequeued vertex s
+            // If a adjacent has not been visited, then mark it
+            // visited and enqueue it
+            Iterator<Integer> i = graph.list.get(s).listIterator();
+            while (i.hasNext())
+            {
+                int n = i.next();
+                if (!visited[n-1])
+                {
+                    visited[n-1] = true;
+                    queue.add(n);
+                }
+            }
         }
     }
 
@@ -63,9 +79,8 @@ public class dfs {
         };
 
         Graph graph = new Graph(edges, nodes);
-        boolean visited[] = new boolean[nodes];
 
         // Starting from node 2
-        DFS(2, visited, graph);
+        DFS(2, graph, nodes);
     }
 }
