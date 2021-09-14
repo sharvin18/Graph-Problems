@@ -1,6 +1,10 @@
 # Graph-Problems
 Graph problems of all difficulty levels solved in Java.
 
+## Algorithms
+- [Depth First Search (DFS)](DFS.java)
+- [Breadth First Search (BFS)](BFS.java)
+
 ## Easy
 - [Find Loops in a graph](FindLoops.java)
 - [Number of Islands](NumberOfIslands.java)
