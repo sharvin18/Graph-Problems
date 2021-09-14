@@ -1,5 +1,5 @@
 # Graph-Problems
-Graph problems of all difficulty levels solved in Java.
+Graph Theory problems of all difficulty levels solved in Java.
 
 ## Algorithms
 - [Depth First Search (DFS)](DFS.java)
