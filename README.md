@@ -11,6 +11,7 @@ Graph Theory problems of all difficulty levels solved in Java.
 - [Find Root Vertex](RootVertex.java)
 - [Topological Sort](TopologicalSort.java)
 - [Path In Directed Graph](pathInDirectedGraph.java)
+- [Keys and Rooms](KeysAndRooms.java)
 
 ## Medium
 - [Stepping Numbers](SteppingNumbers.java)
