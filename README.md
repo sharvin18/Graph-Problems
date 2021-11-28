@@ -17,3 +17,4 @@ Graph Theory problems of all difficulty levels solved in Java.
 - [Stepping Numbers](SteppingNumbers.java)
 - [Word Search](WordSearch.java)
 - [Matrix Probability](MatrixProbability.java)	
+- [All Paths from Source to Target](SourceToTarget.java)
